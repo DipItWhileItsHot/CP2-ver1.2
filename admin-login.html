@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="photos/printedclothes.png" alt="background showing printed clothings" class="abstract-bg">
+
+        <div class="center-container">
+            <img src="photos/053Prints-white.png" alt="053 Prints company logo in white" class="logo">
+
+            <!-- Login Form -->
+            <div class="login-card" id="login-form">
+                <form>
+                    <h2>Admin Login</h2>
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <a class="switch-link" onclick="showForm('upd-password-form')">Forgot Password?</a>
+                    <button type="submit" name="login-btn">Login</button>
+                    <button type="button" name="back-button" class="back-btn" onclick="window.location.href='front-page.html'">Back</button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="login-card" id="upd-password-form">
+                <form>
+                    <h2>Change Password</h2>
+                    <div class="input-group">
+                        <input type="password" name="current-password" placeholder="Current Password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="update-password" placeholder="Update Password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" name="upd-password-btn" class="upd-btn">Confirm</button>
+                    <button type="button" name="back-button" class="back-btn" onclick="showForm('login-form')">Back</button>
+                    <p class="switch-text">Already have an account? <a class="switch-link" onclick="showForm('login-form')">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  <script src="customer-login.js"></script>
+</body>
+</html>

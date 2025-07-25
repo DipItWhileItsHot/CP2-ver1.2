@@ -1,0 +1,78 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure it is above the background */
+    height: 100%;
+}
+
+.title-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.abstract-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind the form container */
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+
+.admin-button, .customer-button {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0 15px;
+  outline: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.admin-button:hover, .customer-button:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
